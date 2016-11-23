@@ -31,4 +31,9 @@ public class Scavenger extends Character{
         defense -= decreaseDefense;
         attackRating += increaseAttack;
     }
+
+    public String about() {
+        String aboutScavenger = "The Scavenger is midway between the Warrior and the Rogue.";
+        return aboutScavenger;
+    }
 }

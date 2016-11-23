@@ -93,7 +93,7 @@ public class YoRPG {
         
         String y = "";
         y += "Choose your class!\n";
-		System.out.println("\nAbout: \n" + Character.about());
+        //System.out.println("\nAbout: \n" + Character.about());
         for (int i = 0; i < CLASSES.length; i++) {
             y += "\t" + i + ": " + CLASSES[i] + "\n";
         }

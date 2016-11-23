@@ -31,4 +31,9 @@ public class Mage extends Character{
         defense -= decreaseDefense;
         attackRating += increaseAttack;
     }
+
+    public String about() {
+        String aboutMage = "The Mage has low hp, high strength, low defense, and medium attack rating.";
+        return aboutMage;
+    }
 }

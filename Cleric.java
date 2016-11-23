@@ -31,6 +31,9 @@ public class Cleric extends Character{
         defense -= decreaseDefense;
         attackRating += increaseAttack;
     }    
-	
 
+    public String about() {
+        String aboutCleric = "The Cleric has high hp, low strength, high defense, and low attack rating.";
+        return aboutCleric;
+    }
 }

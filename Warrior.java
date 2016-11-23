@@ -32,5 +32,8 @@ public class Warrior extends Character{
         attackRating += increaseAttack;
     }   
 	
-
+    public String about() {
+        String aboutWarrior = "The Warrior has medium hp, medium strength, high defense, and low attack rating.";
+        return aboutWarrior;
+    }
 }

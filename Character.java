@@ -43,19 +43,5 @@ public abstract class Character{
     // prepares the Warrior to perform a special attack
     public abstract void specialize();
     
-    public static String about() {
-        String aboutWarrior = "The Warrior has medium hp, medium strength, high defense, and low attack rating.";
-        String aboutRogue = "The Rogue has low hp, low strength, medium defense, and high attack rating.";
-        String aboutScavenger = "The Scavenger is midway between the Warrior and the Rogue.";
-        String aboutCleric = "The Cleric has high hp, low strength, high defense, and low attack rating.";
-        String aboutMage = "The Mage has low hp, high strength, low defense, and medium attack rating.";
-            
-        String[] abouts = {aboutWarrior, aboutRogue, aboutScavenger, aboutCleric, aboutMage};
-
-        String retStr = "";
-        for (String s : abouts) {
-            retStr += s + "\n";
-        }
-        return retStr;
-    }
+    public abstract String about();
 }

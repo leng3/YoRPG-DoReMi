@@ -34,4 +34,8 @@ public class Monster extends Character {
         attackRating += increaseAttack;
     }
 
+    public String about() {
+        String aboutMonster = "Ye Olde Monster has high hp. varying strength from low to high, low defense, and high attack rating.";
+        return aboutMonster;
+    }
 }
