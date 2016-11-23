@@ -37,11 +37,5 @@ public abstract class Character{
         return damage;
     }
 
-    // prepares the Warrior to perform a normal attack; rests values
-    public abstract void normalize();
-
-    // prepares the Warrior to perform a special attack
-    public abstract void specialize();
-    
     public abstract String about();
 }

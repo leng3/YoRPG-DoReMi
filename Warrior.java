@@ -3,7 +3,7 @@
 // HW#34 -- Ye Olde Role Playing Game, Unchained
 // 2016-11-23
 
-public class Warrior extends Character{
+public class Warrior extends Protagonist{
 
     // instance variables
 
@@ -17,20 +17,6 @@ public class Warrior extends Character{
     }
 
     // methods    
-	
-    // prepares the Warrior to perform a normal attack; rests values
-    public void normalize() {
-        defense = 40;
-        attackRating = .4;
-    }
-
-    // prepares the Warrior to perform a special attack
-    public void specialize() {
-        int decreaseDefense = 10; 
-        double increaseAttack = .2;
-        defense -= decreaseDefense;
-        attackRating += increaseAttack;
-    }   
 	
     public String about() {
         String aboutWarrior = "The Warrior has medium hp, medium strength, high defense, and low attack rating.";

@@ -3,7 +3,7 @@
 // HW#34 -- Ye Olde Role Playing Game, Unchained
 // 2016-11-23
 
-public class Cleric extends Character{
+public class Cleric extends Protagonist{
 
     // instance variables
 
@@ -18,20 +18,6 @@ public class Cleric extends Character{
 
     // methods   
 	
-    // prepares the Warrior to perform a normal attack; rests values
-    public void normalize() {
-        defense = 40;
-        attackRating = .4;
-    }
-
-    // prepares the Warrior to perform a special attack
-    public void specialize() {
-        int decreaseDefense = 10; 
-        double increaseAttack = .2;
-        defense -= decreaseDefense;
-        attackRating += increaseAttack;
-    }    
-
     public String about() {
         String aboutCleric = "The Cleric has high hp, low strength, high defense, and low attack rating.";
         return aboutCleric;

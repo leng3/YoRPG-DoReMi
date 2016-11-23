@@ -22,7 +22,7 @@ public class YoRPG {
     private final static String[] CLASSES = {"Warrior", "Scavenger", "Cleric", "Mage", "Rogue"};
 
     //each round, a Cleric, Mage, Rogue, Scavenger, Warrior, and a Monster will be instantiated...
-    private Character pat; // general
+    private Protagonist pat; // general
     private Monster smaug; //Friendly generic monster name?
 
     private int moveCount;

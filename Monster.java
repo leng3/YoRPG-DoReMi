@@ -19,20 +19,6 @@ public class Monster extends Character {
     public String getName() {
     	return "Sully";
     }
-	
-    // prepares the Warrior to perform a normal attack; rests values
-    public void normalize() {
-        defense = 40;
-        attackRating = .4;
-    }
-
-    // prepares the Warrior to perform a special attack
-    public void specialize() {
-        int decreaseDefense = 10; 
-        double increaseAttack = .2;
-        defense -= decreaseDefense;
-        attackRating += increaseAttack;
-    }
 
     public String about() {
         String aboutMonster = "Ye Olde Monster has high hp. varying strength from low to high, low defense, and high attack rating.";
