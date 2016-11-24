@@ -16,9 +16,9 @@ public class YoRPG {
 	
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
 
-    //change this constant to set number of encounters in a game
-    public final static int MAX_ENCOUNTERS = 5;
-	//an array of all classes
+    //change this to set number of encounters in a game
+    private int max_encounters = 5;
+    //an array of all classes
     private final static String[] CLASSES = {"Warrior", "Scavenger", "Cleric", "Mage", "Rogue"};
 
     //each round, a Cleric, Mage, Rogue, Scavenger, Warrior, and a Monster will be instantiated...
@@ -52,8 +52,8 @@ public class YoRPG {
     /*=============================================
       void newGame() -- gathers info to begin a new game
       pre:  
-      post: according to user input, modifies instance vars for difficulty and name
-      and instantiates a class
+      post: according to user input, modifies instance vars for difficulty, name,
+      maximum number of encounters, and class
       =============================================*/
     public void newGame () {
 		
@@ -78,7 +78,15 @@ public class YoRPG {
             name = in.readLine();
     	}
     	catch ( IOException e ) { }
-		
+
+        s = "Warrior, how many monsters shall thy look for?: ";
+        System.out.print( s );
+
+        try {
+            max_encounters = Integer.parseInt( in.readLine() );
+        }
+        catch ( IOException e ) { }
+        
         chooseClass(name);
     }
 
@@ -92,7 +100,7 @@ public class YoRPG {
         int classSelection = 0;
         
         String y = "";
-        y += "Choose your class!\n";
+        y += "Choose thy class!\n";
         //System.out.println("\nAbout: \n" + Character.about());
         for (int i = 0; i < CLASSES.length; i++) {
             y += "\t" + i + ": " + CLASSES[i] + "\n";
@@ -209,7 +217,7 @@ public class YoRPG {
 
     	int encounters = 0;
 
-        while (encounters < MAX_ENCOUNTERS) {
+        while (encounters < game.max_encounters) {
             if (!game.playTurn()) {
                 break;
             }
