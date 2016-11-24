@@ -42,13 +42,65 @@ public class YoRPG {
     	gameOver = false;
     	isr = new InputStreamReader( System.in );
         in = new BufferedReader( isr );
+        introduceGame();
     	newGame();
     }
 	
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     // ~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~~~~~
-	
+
+    /*=============================================
+      void introduceGame() -- introduces YoRPG
+      pre:
+      post:
+      =============================================*/
+    public void introduceGame() {
+        String s = "";
+
+        // Dragon ASCII art: http://www.chris.com/ascii/index.php?art=creatures/dragons
+        // Credits: Jnh
+        s += "__../)" + "\n";
+        s += "-._  \\          /:" + "\n";
+        s += "_.-'  \\        ( \\___" + "\n";
+        s += "  ,'   \\     .'`\\.) :\"-._______" + "\n";
+        s += ",' .'/||    / /   _ `\"\"`  ```  `,        _ _  ~ - _" + "\n";
+        s += " .' / ||   / |   ( `.~v~v~v~v~v'  _  -- *     *  _ -" + "\n";
+        s += "'  /  ||  | .\\    `. `.  __-  ~ -     ~         --   -" + "\n";
+        s += "  /   ||  | :  `----`. `.  -~ _  _ ~ *           *  -" + "\n";
+        s += " /    ||   \\:_     /  `. `.  - *__   -    -       __" + "\n";
+        s += "/    .'/    `.`----\\    `._;        --  _ *  -     _" + "\n";
+        s += "     ||      `,_    `                     - -__ -" + "\n";
+        s += "     ||       /  `---':" + "\n";
+        s += "     ||      /        ;" + "\n";
+        s += "     ||     /_       :" + "\n";
+        s += "     ||    /  `-----':" + "\n";
+        s += "     ||  .'         :" + "\n";
+        s += "     \\\\.'_         _:\\" + "\n";
+        s += "      \\\\__`-------'   `." + "\n";
+        System.out.print( s );
+        s = "";
+        
+        // (Edited) Credits: Jeff Ferris
+        s += "                                  /   \\       " + "\n";
+        s += " _                        )      ((   ))     (" + "\n";
+        s += "(@)                      /|\\      ))_((     /|\\" + "\n";
+        s += "|-|                     / | \\    (/\\|/\\)   / | \\                      (@)" + "\n";
+        s += "| | -------------------/--|-voV---\\`|'/--Vov-|--\\---------------------|-|" + "\n";
+        s += "|-|                         '^`   (o o)  '^`                          | |" + "\n";
+        s += "| |                               `\\Y/'                               |-|" + "\n";
+        s += "|-|                                                                   | |" + "\n";
+        s += "| |                  ~~~ Welcome to Ye Olde RPG! ~~~                  |-|" + "\n";
+        s += "|-|                                                                   | |" + "\n";
+        s += "|_|___________________________________________________________________|-|" + "\n";
+        s += "(@)              l   /\\ /         ( (       \\ /\\   l                `\\| |" + "\n";
+        s += "                 l /   V           \\ \\       V   \\ l                  (@)" + "\n";
+        s += "                 l/                _) )_          \\I" + "\n";
+        s += "                                   `\\ /'" + "\n";
+        s += "				     `";
+        System.out.print( s );
+    }
+    
     /*=============================================
       void newGame() -- gathers info to begin a new game
       pre:  
@@ -56,21 +108,21 @@ public class YoRPG {
       maximum number of encounters, and class
       =============================================*/
     public void newGame () {
-		
+        
     	String s;
     	String name = "";
-    	s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
-        s += "\nChoose your difficulty: \n";
-    	s += "\t1: Easy\n";
-    	s += "\t2: Not so easy\n";
-    	s += "\t3: Beowulf hath nothing on me. Bring it on.\n";
-    	s += "Selection: ";
-    	System.out.print( s );
+        
+        s = "\nChoose your difficulty: \n";
+        s += "\t1: Easy\n";
+        s += "\t2: Not so easy\n";
+        s += "\t3: Beowulf hath nothing on me. Bring it on.\n";
+        s += "Selection: ";
+        System.out.print( s );
 
         try {
             difficulty = Integer.parseInt( in.readLine() );
     	}
-    	catch ( IOException e ) { }
+        catch ( IOException e ) { }
         s = "Intrepid warrior, what doth thy call thyself? (State your name): ";
         System.out.print( s );
 
@@ -89,7 +141,7 @@ public class YoRPG {
         
         chooseClass(name);
     }
-
+    
     /*=============================================
       void chooseClass(String) -- helper function to newGame; chooses class
       pre:
