@@ -1,7 +1,7 @@
 // Team DoReMi (Kenny Chen, Lisa Eng, Yedoh Kang)
 // APCS1 -- pd5
-// HW#34 -- Ye Olde Role Playing Game, Unchained
-// 2016-11-23
+// HW#35 -- Ye Olde Role Playing Game, Realized
+// 2016-11-28
 
 /*=============================================
   class YoRPG -- Driver file for Ye Olde Role Playing Game.
@@ -37,7 +37,6 @@ public class YoRPG {
     // ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
 	
     public YoRPG () {
-		
         moveCount = 0;
     	gameOver = false;
     	isr = new InputStreamReader( System.in );
@@ -59,27 +58,6 @@ public class YoRPG {
         String s = "";
 
         // Dragon ASCII art: http://www.chris.com/ascii/index.php?art=creatures/dragons
-        // Credits: Jnh
-        s += "__../)" + "\n";
-        s += "-._  \\          /:" + "\n";
-        s += "_.-'  \\        ( \\___" + "\n";
-        s += "  ,'   \\     .'`\\.) :\"-._______" + "\n";
-        s += ",' .'/||    / /   _ `\"\"`  ```  `,        _ _  ~ - _" + "\n";
-        s += " .' / ||   / |   ( `.~v~v~v~v~v'  _  -- *     *  _ -" + "\n";
-        s += "'  /  ||  | .\\    `. `.  __-  ~ -     ~         --   -" + "\n";
-        s += "  /   ||  | :  `----`. `.  -~ _  _ ~ *           *  -" + "\n";
-        s += " /    ||   \\:_     /  `. `.  - *__   -    -       __" + "\n";
-        s += "/    .'/    `.`----\\    `._;        --  _ *  -     _" + "\n";
-        s += "     ||      `,_    `                     - -__ -" + "\n";
-        s += "     ||       /  `---':" + "\n";
-        s += "     ||      /        ;" + "\n";
-        s += "     ||     /_       :" + "\n";
-        s += "     ||    /  `-----':" + "\n";
-        s += "     ||  .'         :" + "\n";
-        s += "     \\\\.'_         _:\\" + "\n";
-        s += "      \\\\__`-------'   `." + "\n";
-        System.out.print( s );
-        s = "";
         
         // (Edited) Credits: Jeff Ferris
         s += "                                  /   \\       " + "\n";
@@ -130,7 +108,29 @@ public class YoRPG {
             name = in.readLine();
     	}
     	catch ( IOException e ) { }
-
+		
+        // Credits: Jnh
+        s += "__../)" + "\n";
+        s += "-._  \\          /:" + "\n";
+        s += "_.-'  \\        ( \\___" + "\n";
+        s += "  ,'   \\     .'`\\.) :\"-._______" + "\n";
+        s += ",' .'/||    / /   _ `\"\"`  ```  `,        _ _  ~ - _" + "\n";
+        s += " .' / ||   / |   ( `.~v~v~v~v~v'  _  -- *     *  _ -" + "\n";
+        s += "'  /  ||  | .\\    `. `.  __-  ~ -     ~         --   -" + "\n";
+        s += "  /   ||  | :  `----`. `.  -~ _  _ ~ *           *  -" + "\n";
+        s += " /    ||   \\:_     /  `. `.  - *__   -    -       __" + "\n";
+        s += "/    .'/    `.`----\\    `._;        --  _ *  -     _" + "\n";
+        s += "     ||      `,_    `                     - -__ -" + "\n";
+        s += "     ||       /  `---':" + "\n";
+        s += "     ||      /        ;" + "\n";
+        s += "     ||     /_       :" + "\n";
+        s += "     ||    /  `-----':" + "\n";
+        s += "     ||  .'         :" + "\n";
+        s += "     \\\\.'_         _:\\" + "\n";
+        s += "      \\\\__`-------'   `." + "\n";
+        System.out.print( s );
+		
+        s = "";
         s = "Warrior, how many monsters shall thy look for?: ";
         System.out.print( s );
 
@@ -153,7 +153,7 @@ public class YoRPG {
         
         String y = "";
         y += "Choose thy class!\n";
-        //System.out.println("\nAbout: \n" + Character.about());
+        //System.out.println("\nAbout: \n" + .about());
         for (int i = 0; i < CLASSES.length; i++) {
             y += "\t" + i + ": " + CLASSES[i] + "\n";
         }
@@ -230,10 +230,15 @@ public class YoRPG {
 
                 d1 = pat.attack(smaug);
                 d2 = smaug.attack(pat);
+				
+				if (d1 > d2) {
+					pat.levelUp();
+				}
 
                 System.out.println("\n" + pat.getName() + " dealt " + d1 + " points of damage.");
                 System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() + 
                                     " for " + d2 + " points of damage.");
+				System.out.println("\n" + pat.getName() + "'s current level is: " + pat.getLevel() + ".\n");
             }//end while
 
             //option 1: you & the monster perish

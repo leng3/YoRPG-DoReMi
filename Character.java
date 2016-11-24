@@ -1,7 +1,7 @@
 // Team DoReMi (Kenny Chen, Lisa Eng, Yedoh Kang)
 // APCS1 -- pd5
-// HW#34 -- Ye Olde Role Playing Game, Unchained
-// 2016-11-23
+// HW#35 -- Ye Olde Role Playing Game, Realized
+// 2016-11-28
 
 public abstract class Character{
 
@@ -10,6 +10,7 @@ public abstract class Character{
     protected int strength;
     protected int defense;
     protected double attackRating;
+	protected int level = 1;
 
     public boolean isAlive() {
         return hp > 0;
@@ -22,10 +23,19 @@ public abstract class Character{
     public int getDefense() {
         return defense;
     }
+	
+	public int getLevel() {
+		return level;
+	}
 
     public void lowerHP (int amount) {
         hp -= amount;
     }
+	
+	public int levelUp () {
+		level += 1;
+		return level;
+	}
 	
     // attacks and calculates damage
     public int attack (Character character) {

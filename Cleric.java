@@ -1,7 +1,7 @@
 // Team DoReMi (Kenny Chen, Lisa Eng, Yedoh Kang)
 // APCS1 -- pd5
-// HW#34 -- Ye Olde Role Playing Game, Unchained
-// 2016-11-23
+// HW#35 -- Ye Olde Role Playing Game, Realized
+// 2016-11-28
 
 public class Cleric extends Protagonist{
 
