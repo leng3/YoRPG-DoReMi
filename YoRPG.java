@@ -150,10 +150,25 @@ public class YoRPG {
     public void chooseClass(String name) {
         // choose your own class!
         int classSelection = 0;
+		
+		// prints out info about each class
+		System.out.println("\nAbout: ");
+		pat = new Warrior("m");
+		System.out.println(pat.about());
+		pat = new Scavenger("m");
+		System.out.println(pat.about());
+		pat = new Cleric("m");
+		System.out.println(pat.about());
+		pat = new Mage("m");
+		System.out.println(pat.about());
+		pat = new Rogue("m");
+		System.out.println(pat.about());
+		smaug = new Monster();
+		System.out.println(smaug.about());
         
         String y = "";
-        y += "Choose thy class!\n";
-        //System.out.println("\nAbout: \n" + .about());
+        y += "\nChoose thy class!\n";
+		
         for (int i = 0; i < CLASSES.length; i++) {
             y += "\t" + i + ": " + CLASSES[i] + "\n";
         }
@@ -189,7 +204,6 @@ public class YoRPG {
         }
 
         System.out.println("Selection: " + CLASSES[classSelection]);
-		System.out.println("About: " + pat.about());
     }
     /*=============================================
       boolean playTurn -- simulates a round of combat
