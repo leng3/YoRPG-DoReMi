@@ -231,14 +231,20 @@ public class YoRPG {
                 d1 = pat.attack(smaug);
                 d2 = smaug.attack(pat);
 				
-				if (d1 > d2) {
-					pat.levelUp();
-				}
+		if (d1 > d2) {
+		    pat.generateHPToAdd();
+		    pat.gainHP(pat.getNumToAddHP());
+		    pat.levelUp();
+		}
 
                 System.out.println("\n" + pat.getName() + " dealt " + d1 + " points of damage.");
                 System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() + 
                                     " for " + d2 + " points of damage.");
-				System.out.println("\n" + pat.getName() + "'s current level is: " + pat.getLevel() + ".\n");
+		System.out.println("\n" + "Because " + pat.getName() + " was so heroic, " +
+				   pat.getName() + " gains " + pat.getNumToAddHP() + " points of HP! ");
+		System.out.println(pat.getName() + "'s current HP is: " + pat.getHP());
+		System.out.println("\n" + pat.getName() + "'s current level is: " + pat.getLevel() + ".\n");
+
             }//end while
 
             //option 1: you & the monster perish

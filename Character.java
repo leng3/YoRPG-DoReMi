@@ -10,7 +10,8 @@ public abstract class Character{
     protected int strength;
     protected int defense;
     protected double attackRating;
-	protected int level = 1;
+    protected int level = 1;
+    protected int numToAddHP;
 
     public boolean isAlive() {
         return hp > 0;
@@ -24,18 +25,34 @@ public abstract class Character{
         return defense;
     }
 	
-	public int getLevel() {
-		return level;
-	}
+    public int getLevel() {
+	return level;
+    }
 
     public void lowerHP (int amount) {
         hp -= amount;
     }
 	
-	public int levelUp () {
-		level += 1;
-		return level;
-	}
+    public int levelUp () {
+	level += 1;
+	return level;
+    }
+
+    public int getHP() {
+	return hp;
+    }
+
+    public void generateHPToAdd(){
+	numToAddHP = (int)((Math.random()) * 25);
+    }
+
+    public int getNumToAddHP () {
+	return numToAddHP;
+    }
+	
+    public void gainHP(int amount) {
+	hp+=amount;
+    }
 	
     // attacks and calculates damage
     public int attack (Character character) {
