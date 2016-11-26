@@ -244,7 +244,7 @@ public class YoRPG {
 		System.out.println("\n" + "Because " + pat.getName() + " was so heroic, " +
 				   pat.getName() + " gains " + pat.getNumToAddHP() + " points of HP! ");
 		System.out.println(pat.getName() + "'s current HP is: " + pat.getHP());
-		System.out.println("\n" + pat.getName() + "'s current level is: " + pat.getLevel() + ".\n");
+		System.out.println(pat.getName() + "'s current level is: " + pat.getLevel() + ".\n");
 
             }//end while
 
