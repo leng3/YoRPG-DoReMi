@@ -189,6 +189,7 @@ public class YoRPG {
         }
 
         System.out.println("Selection: " + CLASSES[classSelection]);
+		System.out.println("About: " + pat.about());
     }
     /*=============================================
       boolean playTurn -- simulates a round of combat
