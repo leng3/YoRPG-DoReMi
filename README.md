@@ -5,10 +5,13 @@
 #### Members: Kenny Chen, Lisa Eng, Yedoh Kang
 
 #### Feature Additions
-1. Storyline
-2. Gaining HP after every match
+1. ASCII Art (Dragons)
+2. Health Points
+  * HP is printed after every match
+  * A little bit of HP is added after each match, amount varies
 3. Leveling Up
-4. ASCII ART
+  * Current Level is printed after every match
+  * Level up when user loses less HP than those of the monster
 
 #### Coding Restructuring
 1. 
