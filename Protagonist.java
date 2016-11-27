@@ -20,18 +20,18 @@ public class Protagonist extends Character {
     }
     
     public String about() {
-        String aboutWarrior = "\tThe Warrior has medium hp, medium strength, high defense, and low attack rating.";
-        String aboutRogue = "\tThe Rogue has low hp, low strength, medium defense, and high attack rating.";
-        String aboutScavenger = "\tThe Scavenger is midway between the Warrior and the Rogue.";
-        String aboutCleric = "\tThe Cleric has high hp, low strength, high defense, and low attack rating.";
-        String aboutMage = "\tThe Mage has low hp, high strength, low defense, and medium attack rating.";
-	    String aboutMonster = "\tYe Olde Monster has high hp. varying strength from low to high, low defense, and high attack rating.";
+        String aboutWarrior = "The Warrior has medium hp, medium strength, high defense, and low attack rating.";
+        String aboutRogue = "The Rogue has low hp, low strength, medium defense, and high attack rating.";
+        String aboutScavenger = "The Scavenger is midway between the Warrior and the Rogue.";
+        String aboutCleric = "The Cleric has high hp, low strength, high defense, and low attack rating.";
+        String aboutMage = "The Mage has low hp, high strength, low defense, and medium attack rating.";
+	    String aboutMonster = "Ye Olde Monster has high hp. varying strength from low to high, low defense, and high attack rating.";
 
         String[] abouts = {aboutWarrior, aboutRogue, aboutScavenger, aboutCleric, aboutMage, aboutMonster};
 
         String retStr = "";
         for (String s : abouts) {
-            retStr += s + "\n";
+            retStr += "\t" + s + "\n";
         }
         return retStr;
     }
