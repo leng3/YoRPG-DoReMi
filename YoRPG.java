@@ -24,7 +24,6 @@ public class YoRPG {
     //each round, a Cleric, Mage, Rogue, Scavenger, Warrior, and a Monster will be instantiated...
     private Protagonist pat; // general
     private Monster smaug; //Friendly generic monster name?
-	private Protagonist aboutClass; // to print about about()
 
     private int moveCount;
     private boolean gameOver;
@@ -149,11 +148,13 @@ public class YoRPG {
       post: according to user input, instantiates pat to a class
       =============================================*/
     public void chooseClass(String name) {
-        // choose your own class!
-        int classSelection = 0;
+		
+		Protagonist aboutClass; // to print about about()
+        int classSelection = 0; // choose your own class!
 		
 		// to print out info about each class
 		System.out.println("\nAbout: ");
+	
 		aboutClass = new Protagonist();
 		System.out.println(aboutClass.about());
         
