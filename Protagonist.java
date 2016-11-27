@@ -31,7 +31,7 @@ public class Protagonist extends Character {
 
         String retStr = "";
         for (String s : abouts) {
-            retStr += "\t" + s + "\n";
+            retStr += "   " + s + "\n";
         }
         return retStr;
     }
