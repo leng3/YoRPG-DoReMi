@@ -16,8 +16,8 @@ public class Cleric extends Protagonist{
         attackRating = 0.4;
     }
 
-    // methods   
-	
+    // methods
+
     public String about() {
         String aboutCleric = "The Cleric has high hp, low strength, high defense, and low attack rating.";
         return aboutCleric;

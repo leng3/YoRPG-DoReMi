@@ -16,8 +16,8 @@ public class Mage extends Protagonist{
         attackRating = 0.5;
     }
 
-    // methods       
-    
+    // methods
+
     public String about() {
         String aboutMage = "The Mage has low hp, high strength, low defense, and medium attack rating.";
         return aboutMage;

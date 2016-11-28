@@ -16,8 +16,8 @@ public class Warrior extends Protagonist{
         attackRating = 0.4;
     }
 
-    // methods    
-	
+    // methods
+
     public String about() {
         String aboutWarrior = "The Warrior has medium hp, medium strength, high defense, and low attack rating.";
         return aboutWarrior;

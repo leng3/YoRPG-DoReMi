@@ -16,7 +16,7 @@ public abstract class Character{
     public boolean isAlive() {
         return hp > 0;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -24,22 +24,22 @@ public abstract class Character{
     public int getDefense() {
         return defense;
     }
-	
+
     public int getLevel() {
-	return level;
+        return level;
     }
 
     public void lowerHP (int amount) {
         hp -= amount;
     }
-	
+
     public int levelUp () {
-	level += 1;
-	return level;
+        level += 1;
+        return level;
     }
 
     public int getHP() {
-	return hp;
+        return hp;
     }
 
     public int regenHP() {
@@ -47,7 +47,7 @@ public abstract class Character{
         hp += random;
         return random;
     }
-	
+
     // attacks and calculates damage
     public int attack (Character character) {
         int damage = (int)(strength * attackRating) - character.getDefense();

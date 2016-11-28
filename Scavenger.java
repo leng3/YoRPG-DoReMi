@@ -16,7 +16,7 @@ public class Scavenger extends Protagonist{
         attackRating = 0.5;
     }
 
-    // methods       
+    // methods
 
     public String about() {
         String aboutScavenger = "The Scavenger is midway between the Warrior and the Rogue.";

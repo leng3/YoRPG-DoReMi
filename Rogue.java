@@ -16,7 +16,7 @@ public class Rogue extends Protagonist{
         attackRating = 0.6;
     }
 
-    // methods       
+    // methods
 
     public String about() {
         String aboutRogue = "The Rogue has low hp, low strength, medium defense, and high attack rating.";
