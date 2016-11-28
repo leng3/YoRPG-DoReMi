@@ -130,7 +130,6 @@ public class YoRPG {
         s += "      \\\\__`-------'   `." + "\n";
         System.out.print( s );
 		
-        s = "";
         s = "Warrior, how many monsters shall thy look for?: ";
         System.out.print( s );
 
@@ -149,14 +148,12 @@ public class YoRPG {
       =============================================*/
     public void chooseClass(String name) {
 		
-		Protagonist aboutClass; // to print about about()
         int classSelection = 0; // choose your own class!
 		
-		// to print out info about each class
-		System.out.println("\nAbout: ");
-	
-		aboutClass = new Protagonist();
-		System.out.println(aboutClass.about());
+        // to print out info about each class
+        System.out.println("\nAbout: ");
+        Protagonist aboutClass = new Protagonist();
+        System.out.println(aboutClass.about());
         
         String y = "";
         y += "Choose thy class!\n";
@@ -239,16 +236,13 @@ public class YoRPG {
                 d2 = smaug.attack(pat);
 				
 		if (d1 > d2) {
-		    pat.generateHPToAdd();
-		    pat.gainHP(pat.getNumToAddHP());
 		    pat.levelUp();
 		}
 
                 System.out.println("\n" + pat.getName() + " dealt " + d1 + " points of damage.");
-                System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() + 
+                System.out.println("\n" + "Ye Olde Monster smacked " + pat.getName() +
                                     " for " + d2 + " points of damage.");
-		System.out.println("\n" + "Because " + pat.getName() + " was so heroic, " +
-				   pat.getName() + " gains " + pat.getNumToAddHP() + " points of HP! ");
+		System.out.println("\n" + pat.getName() + " regens " + pat.regenHP() + " points of HP! ");
 		System.out.println(pat.getName() + "'s current HP is: " + pat.getHP());
 		System.out.println(pat.getName() + "'s current level is: " + pat.getLevel() + ".\n");
 

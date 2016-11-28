@@ -5,13 +5,13 @@
 
 public abstract class Character{
 
+    protected final static int MAX_REGEN_HP = 25;
     protected String name;
     protected int hp; // number of health points
     protected int strength;
     protected int defense;
     protected double attackRating;
     protected int level = 1;
-    protected int numToAddHP;
 
     public boolean isAlive() {
         return hp > 0;
@@ -42,16 +42,10 @@ public abstract class Character{
 	return hp;
     }
 
-    public void generateHPToAdd(){
-	numToAddHP = (int)((Math.random()) * 25);
-    }
-
-    public int getNumToAddHP () {
-	return numToAddHP;
-    }
-	
-    public void gainHP(int amount) {
-	hp+=amount;
+    public int regenHP() {
+        int random = (int)((Math.random()) * MAX_REGEN_HP);
+        hp += random;
+        return random;
     }
 	
     // attacks and calculates damage
